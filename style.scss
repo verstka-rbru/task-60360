@@ -1,0 +1,211 @@
+/* Блок Содержание статьи */
+.zblogDetail__content {
+	min-width: 0;
+}
+.sticky {
+	position: sticky;
+	top: 153px;
+
+	display: flex;
+	flex-direction: column;
+	gap: 45px;
+}
+.zblogDetail__box {
+	position: relative;
+	top: initial;
+}
+
+.page-navigation {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+}
+
+.page-navigation__title {
+	font-weight: 600;
+	font-size: 20px;
+	line-height: normal;
+}
+
+.page-navigation__list {
+	padding-left: 16px;
+
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+
+	color: #b29470;
+
+	list-style: decimal;
+}
+
+.page-navigation__list a {
+	font-weight: 400;
+	font-size: 16px;
+	color: #b29470;
+
+	transition: all 0.25s;
+}
+
+.page-navigation__list .active a,
+.page-navigation__list a:hover {
+	color: #000;
+}
+
+/* Блок с рекомендуемыми товарами */
+.recommended {
+	margin-top: 25px;
+	margin-bottom: 25px;
+
+	padding: 30px;
+	display: flex;
+	flex-direction: column;
+	gap: 15px;
+
+	border-radius: 3px;
+	background-color: #fff;
+	overflow: hidden;
+
+	@media screen and (max-width: 992px) {
+		margin-left: -25px;
+		margin-right: -25px;
+		width: calc(100% + 50px);
+		padding: 25px;
+	}
+
+}
+.recommended__top {
+	position: relative;
+	padding-right: 120px;
+
+	@media screen and (max-width: 992px) {
+		padding-right: 0;
+	}
+}
+.recommended__title {
+	font-weight: 600;
+	font-size: 24px;
+	line-height: 135%;
+	text-transform: uppercase;
+	color: var(--text);
+}
+.recom-arr {
+	display: flex;
+	width: 95px;
+	justify-content: space-between;
+
+	position: absolute;
+	right: 0;
+	top: -5px;
+
+	color: blue;
+}
+@media screen and (max-width: 992px) {
+	.recom-arr {
+		display: none;
+	}
+}
+.recom-arr__item {
+	color: red;
+	width: 41px;
+	height: 41px;
+	background-position: center;
+	background-color: #f1f1f1;
+	background-image: url("data:image/svg+xml,%3Csvg width='10' height='16' viewBox='0 0 10 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M9.02247 8.90476C9.4283 8.49892 9.4283 7.84092 9.02247 7.43509L2.40894 0.821558C2.0031 0.415719 1.3451 0.415719 0.939264 0.821558C0.533425 1.2274 0.533425 1.88539 0.939264 2.29123L6.81796 8.16992L0.939264 14.0486C0.533425 14.4545 0.533425 15.1124 0.939264 15.5183C1.3451 15.9241 2.0031 15.9241 2.40894 15.5183L9.02247 8.90476ZM7.24841 9.20914H8.28763V7.13071H7.24841V9.20914Z' fill='currentColor' /%3E%3C/svg%3E");
+	background-repeat: no-repeat;
+	border-radius: 50%;
+	transition: all 0.25s;
+
+	cursor: pointer;
+}
+.recom-arr__item:hover {
+	background-color: #e8e8e8;
+}
+.recom-arr__item.prev {
+	transform: rotate(180deg);
+}
+.recommended__slider {
+}
+.recommended-slider {
+	width: 100%;
+	min-width: 0;
+}
+.recommended-slider__wrapper {
+}
+.recom-arr-pagination {
+	justify-content: center;
+	display: none;
+
+	@media screen and (max-width: 992px) {
+		display: flex;
+	}
+}
+
+.recom-arr-pagination .swiper-pagination-bullet {
+	background-color: #828282;
+}
+.recom-arr-pagination .swiper-pagination-bullet-active {
+	background-color: #b29470;
+}
+.recommended-slider__item {
+}
+.recom-item {
+	padding: 5px;
+	display: flex;
+	flex-direction: column;
+}
+.recom-item.recom-item:hover {
+	text-decoration: none;
+}
+.recom-item__img {
+	margin-bottom: 10px;
+	aspect-ratio: 1 / 1;
+	border-radius: 3px;
+	overflow: hidden;
+	width: 100%;
+	/* display: none; */
+
+	img {
+		display: block;
+		width: 100%;
+		height: auto;
+	}
+}
+.recom-item__title {
+	margin-bottom: 5px;
+
+	font-weight: 600;
+	font-size: 15px;
+	text-transform: uppercase;
+	text-align: center;
+	color: #34322d;
+}
+.recom-item__price {
+	margin-bottom: 10px;
+	font-family: var(--font-family);
+	font-weight: 600;
+	font-size: 20px;
+	line-height: 135%;
+	text-align: center;
+	color: var(--text);
+}
+.recom-item__btn {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border: 1px solid #b29470;
+	border-radius: 3px;
+	padding: 12px 30px;
+
+	font-family: "Inter", sans-serif;
+	font-weight: 500;
+	font-size: 14px;
+	line-height: 1.35;
+	color: #34322d;
+
+	background-color: #fff;
+	transition: all 0.25s;
+}
+.recom-item:hover .recom-item__btn {
+	background-color: #f1f1f1;
+}
